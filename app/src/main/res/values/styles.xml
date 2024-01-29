@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="White" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="imgViewScore">
+        <item name="android:layout_width">@dimen/colors_size</item>
+        <item name="android:layout_height">@dimen/colors_size</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/colors_mh</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/colors_mv</item>
+        <item name="android:contentDescription">@string/score</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="button_game234">
+        <item name="android:layout_width">@dimen/colors_size</item>
+        <item name="android:layout_height">@dimen/colors_size</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/colors_mh</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/colors_mv</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:onClick">SetColor</item>
+    </style>
+
+    <style name="button_game1">
+        <item name="android:layout_width">@dimen/colors_size</item>
+        <item name="android:layout_height">@dimen/colors_size</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/colors_mh</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/colors_mv</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:onClick">SetColor</item>
+    </style>
+
+    <style name="button_col">
+        <item name="android:layout_width">@dimen/colors_size</item>
+        <item name="android:layout_height">@dimen/colors_size</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/colors_mh</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/colors_mv</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:onClick">PickColor</item>
+    </style>
+
+    <style name="button_sol">
+        <item name="android:layout_width">@dimen/colors_size</item>
+        <item name="android:layout_height">@dimen/colors_size</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/solution_mh</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/solution_mv</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="row">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/colors_mv</item>
+        <item name="android:background">@drawable/draw_general</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>

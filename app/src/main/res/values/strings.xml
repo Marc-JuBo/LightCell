@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LightCell</string>
+    <string name="title">GUESS THE FOUR COLORS!</string>
+    <string name="score1">0</string>
+    <string name="win_message">YOU HAVE WON,\nCONGRATULATIONS!\n\n</string>
+    <string name="lose_message">GAME OVER \n Better luck for next game!</string>
+    <string name="statistics_title">These are your statistics:</string>
+    <string name="games_won_title">Games Won:</string>
+    <string name="play_again_button">Play again</string>
+    <string name="games_won">1</string>
+    <string name="games_played">1</string>
+    <string name="games_played_title">Games Played:</string>
+    <string name="best_score_title">Best Score:</string>
+    <string name="best_score">1</string>
+    <string name="avg_score_title">Average Score:</string>
+    <string name="avg_score">1</string>
+    <string name="rows_of_game" />
+    <string name="score">Score</string>
+    <string name="error_message_equal_colors">All colors must be different</string>
+    <string name="error_message_blank_colors">All colors must be filled</string>
+</resources>

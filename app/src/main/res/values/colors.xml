@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors for the game -->
+    <color name="red">#FF0000</color>
+    <color name="red_pressed">#CC0000</color>
+
+    <color name="orange">#FF8000</color>
+    <color name="orange_pressed">#CC5000</color>
+
+    <color name="yellow">#FFFF00</color>
+    <color name="yellow_pressed">#AAAA00</color>
+
+    <color name="green">#00FF00</color>
+    <color name="green_pressed">#00AA00</color>
+
+    <color name="cyan">#00FFFF</color>
+    <color name="cyan_pressed">#00AAAA</color>
+
+    <color name="blue">#0060FF</color>
+    <color name="blue_pressed">#0030CC</color>
+
+    <color name="purple">#8030FF</color>
+    <color name="purple_pressed">#5000CC</color>
+
+    <color name="pink">#FF33FF</color>
+    <color name="pink_pressed">#DD11DD</color>
+
+    <!-- Colors for the buttons of the game -->
+    <color name="grey">#999999</color>
+    <color name="grey_pressed">#555555</color>
+
+    <!-- Colors for the background of the game -->
+    <color name="light_green">#99FF99</color>
+    <color name="light_red">#FFBBBB</color>
+    <color name="light_blue">#0088FF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="nearly_transparent">#22000000</color>
+
+    <color name="ic_launcher_background">#E0B0FF</color>
+</resources>

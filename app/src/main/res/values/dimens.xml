@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Accept row button -->
+    <dimen name="accept_size">
+        70dp
+    </dimen>
+    <dimen name="accept_corner_radius">
+        10dp
+    </dimen>
+
+    <!-- PickColor button attributes -->
+    <dimen name="colors_size">
+        50dp
+    </dimen>
+    <dimen name="colors_corner_radius">
+        20dp
+    </dimen>
+    <dimen name="colors_mh">
+        4dp
+    </dimen>
+    <dimen name="colors_mv">
+        8dp
+    </dimen>
+
+    <dimen name="check_mr">
+        12dp
+    </dimen>
+
+    <dimen name="text_mh">20dp</dimen>
+    <dimen name="text_mv">15dp</dimen>
+    <dimen name="solution_mv">10dp</dimen>
+    <dimen name="solution_mh">8dp</dimen>
+
+</resources>

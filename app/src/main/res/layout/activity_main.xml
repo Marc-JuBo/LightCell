@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/colors_mh"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/colors_mh"
+            android:paddingVertical="@dimen/colors_mv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageButton
+                android:id="@+id/accept_button"
+                android:layout_width="@dimen/accept_size"
+                android:layout_height="@dimen/accept_size"
+                android:layout_marginHorizontal="@dimen/colors_mh"
+                android:layout_marginVertical="@dimen/colors_mv"
+                android:background="@drawable/draw_general"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="tryGuess"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_send"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/restart_button"
+                android:layout_width="@dimen/accept_size"
+                android:layout_height="@dimen/accept_size"
+                android:layout_marginHorizontal="@dimen/colors_mh"
+                android:layout_marginVertical="@dimen/colors_mv"
+                android:background="@drawable/draw_button_replay"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="reset_game"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/accept_corner_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/stat_notify_sync"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/red_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/red"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/orange_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/orange"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/red_button"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/yellow_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/yellow"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orange_button"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/green_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/green"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yellow_button"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/cyan_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/cyan"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/green_button"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/blue_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/blue"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cyan_button"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/purple_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/purple"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blue_button"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/pink_button"
+                style="@style/button_col"
+                app:backgroundTint="@color/pink"
+                app:cornerRadius="@dimen/colors_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/grey_button"
+                android:layout_width="@dimen/colors_size"
+                android:layout_height="@dimen/colors_size"
+                android:visibility="gone"
+                app:backgroundTint="@color/grey"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="@dimen/text_mv"
+                android:layout_marginHorizontal="@dimen/text_mh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <TextView
+                android:id="@+id/textview_congrats_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_general"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="@dimen/text_mh"
+                android:paddingVertical="@dimen/text_mv"
+                android:layout_marginVertical="@dimen/text_mv"
+                android:singleLine="false"
+                android:text="@string/win_message"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.222" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_linearlayout_solution"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_sol1"
+                    style="@style/button_sol"
+                    android:layout_marginStart="@dimen/solution_mv"
+                    android:layout_marginEnd="@dimen/solution_mh"
+                    app:backgroundTint="@color/grey"
+                    app:cornerRadius="@dimen/colors_corner_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                    tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_sol2"
+                    style="@style/button_sol"
+                    app:backgroundTint="@color/grey"
+                    app:cornerRadius="@dimen/colors_corner_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                    tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_sol3"
+                    style="@style/button_sol"
+                    app:backgroundTint="@color/grey"
+                    app:cornerRadius="@dimen/colors_corner_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_sol4"
+                    style="@style/button_sol"
+                    android:layout_marginStart="@dimen/solution_mh"
+                    android:layout_marginEnd="@dimen/solution_mv"
+                    android:alpha="0.99"
+                    app:backgroundTint="@color/grey"
+                    app:cornerRadius="@dimen/colors_corner_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                    tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_error_message"
+                android:padding="@dimen/solution_mv"
+                android:layout_marginVertical="@dimen/solution_mh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/light_red"
+                android:text="@string/error_message_equal_colors"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="ScrollViewCount">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/row20"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r20b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r20b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r20b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r20b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score20"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row19"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r19b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r19b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r19b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r19b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score19"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row18"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r18b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r18b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r18b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r18b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score18"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row17"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r17b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r17b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r17b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r17b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score17"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row16"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r16b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r16b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r16b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r16b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score16"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row15"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r15b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r15b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r15b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r15b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score15"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row14"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r14b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r14b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r14b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r14b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score14"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row13"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r13b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r13b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r13b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r13b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score13"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row12"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r12b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r12b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r12b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r12b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score12"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row11"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r11b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r11b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,TooManyViews,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r11b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r11b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,TooManyViews,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score11"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row10"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r10b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r10b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r10b3"
+                            android:layout_width="@dimen/colors_size"                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:onClick="SetColor"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r10b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score10"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row9"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r9b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r9b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r9b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r9b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score9"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row8"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r8b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r8b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r8b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r8b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score8"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/colors_mv"
+                        android:background="@drawable/draw_general"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:ignore="TooManyViews">
+
+                        <Button
+                            android:id="@+id/r7b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r7b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r7b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r7b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score7"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row6"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r6b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r6b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r6b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r6b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score6"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row5"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r5b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r5b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r5b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r5b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score5"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row4"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r4b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r4b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r4b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r4b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score4"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row3"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r3b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r3b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r3b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r3b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score3"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row2"
+                        style="@style/row">
+
+                        <Button
+                            android:id="@+id/r2b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r2b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r2b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r2b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+
+                        <ImageView
+                            android:id="@+id/score2"
+                            android:layout_width="@dimen/colors_size"
+                            android:layout_height="@dimen/colors_size"
+                            android:layout_marginHorizontal="@dimen/colors_mh"
+                            android:layout_marginVertical="@dimen/colors_mv"
+                            android:contentDescription="@string/score"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            app:srcCompat="@drawable/_00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/colors_mv"
+                        android:background="@drawable/draw_general"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/r1b1"
+                            style="@style/button_game1"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r1b2"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r1b3"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="UsingOnClickInXml" />
+
+                        <Button
+                            android:id="@+id/r1b4"
+                            style="@style/button_game234"
+                            app:backgroundTint="@color/grey"
+                            app:cornerRadius="@dimen/colors_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purple_button"
+                            tools:ignore="ButtonStyle,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                        <ImageView
+                            android:id="@+id/score1"
+                            style="@style/imgViewScore"
+                            app:srcCompat="@drawable/_00"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
